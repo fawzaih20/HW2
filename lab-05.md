@@ -162,13 +162,25 @@ your Git pane is cleared up afterwards.*
     the most common?
 
 ``` r
-nobel_living_science%>% filter(born_country_us=="other" ,country_us=="USA")%>%count(born_country)%>%arrange(desc(n))
+nobel_living_science %>% filter(born_country_us=="Other",country_us=="USA")%>%count(born_country) %>%arrange(desc(n))
 ```
 
-    ## # A tibble: 0 x 2
-    ## # … with 2 variables: born_country <chr>, n <int>
+    ## # A tibble: 37 x 2
+    ##    born_country       n
+    ##    <chr>          <int>
+    ##  1 United Kingdom    15
+    ##  2 Canada            12
+    ##  3 Germany           10
+    ##  4 China              6
+    ##  5 Poland             6
+    ##  6 France             5
+    ##  7 Italy              5
+    ##  8 Japan              5
+    ##  9 Austria            4
+    ## 10 Hungary            4
+    ## # … with 27 more rows
 
-NA2: Germany and United Kingdom
+NA2: United kingdom and Canada
 
 Knit, *commit, and push your changes to GitHub with an appropriate
 commit message. Make sure to commit and push all changed files so that
