@@ -99,8 +99,9 @@ Knit, *commit, and push your changes to GitHub with an appropriate commit messag
 
 ```{r}
 nobel_living_science %>%
-ggplot(aes(x = country_us, y=category, fill =category)) +
-geom_bar(stat = "identity" , position = "dodge" , orientation="horizontal" )
+ggplot(aes(x = country_us,y=category, fill =category)) +
+geom_bar(stat = "identity", position = "dodge") +
+coord_flip()
 ```
 
 
@@ -110,7 +111,11 @@ geom_bar(stat = "identity" , position = "dodge" , orientation="horizontal" )
 
 ```{r}
 
+
+
+
 ```
+
 
 Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.d*
 
