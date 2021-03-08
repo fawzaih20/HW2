@@ -161,6 +161,15 @@ your Git pane is cleared up afterwards.*
     order of number of observations for each country. Which country is
     the most common?
 
+``` r
+nobel_living_science%>% filter(born_country_us=="other" ,country_us=="USA")%>%count(born_country)%>%arrange(desc(n))
+```
+
+    ## # A tibble: 0 x 2
+    ## # … with 2 variables: born_country <chr>, n <int>
+
+NA2: Germany and United Kingdom
+
 Knit, *commit, and push your changes to GitHub with an appropriate
 commit message. Make sure to commit and push all changed files so that
 your Git pane is cleared up afterwards and review the md document on
